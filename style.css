@@ -1,0 +1,558 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: Arial, sans-serif;
+}
+
+.navibar {
+    border: 2px solid rgb(0, 0, 0);
+    background-color: black;
+    color: rgb(255, 0, 0);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: fixed;
+    z-index: 100;
+
+}
+.navibar img {
+    width: 102px;
+    height: auto;
+    align-self: center;
+}
+
+.item a {
+    padding: 25px;
+    text-decoration: none;
+    color: red;
+}
+.item a:hover{
+    color: black;
+    background-color: rgb(188, 187, 190);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.item a:visited{
+    text-decoration: none;
+    color: red;
+}
+
+#item-1{color: #0086cd;}
+#item-2{color: #00d477;}
+#item-3{color: #ffe401}
+#item-4{color: #f046da;}
+#item-5{color: #f48b0c}
+
+
+
+/* INTRO-SECTION */
+.intro-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    background-color: #0086cd;
+    height: 100vh;
+}
+
+.intro-left {
+    flex: 1;
+    padding: 20px;
+    margin: 40px;
+}
+
+.intro-left h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.intro-left p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.intro-left button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    background-color: rgb(2, 6, 10);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.intro-left button:hover {
+    color: black;
+    background-color: rgb(229, 237, 246);
+}
+
+
+.intro-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: moveUpDown 1s ease infinite alternate;
+}
+
+.intro-right img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 20px;
+    margin-right: 50px;
+    box-shadow: rgba(181, 22, 22, 0.1) 4px 3px 3px 1px;
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(-40px);
+    }
+}
+
+/* FEATURED PLAYLISTS */
+.featured-playlists {
+    padding: 30px;
+    text-align: center;
+    background-color: #00d477;
+    height: 100vh;
+}
+
+.section-header h1 {
+    font-size: 2.5em;
+    padding-top: 20px;
+    margin-top: 41px;
+    margin-bottom: 20px;
+}
+
+.section-header p {
+    font-size: 1.2em;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.playlist-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 30px;
+}
+
+.playlist-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 250px;
+    text-align: left;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.playlist-card:hover{
+    transform: scale(1.05);
+}
+
+.card-header {
+    position: relative;
+}
+
+.card-header img {
+    width: 100%;
+    height: auto;
+}
+
+.song-count {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(230, 138, 138, 0.6);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-body h2 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+}
+
+.card-body p {
+    color: #555;
+    margin: 0 0 15px;
+    font-size: 1em;
+}
+
+.follow-btn {
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #0073e6;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 1em;
+    color: #0073e6;
+    user-select: none;
+}
+
+.follow-btn input[type="checkbox"] {
+    display: none;
+}
+
+.follow-btn .btn-text::before {
+    content: "Follow";
+}
+
+.follow-btn input[type="checkbox"]:checked + .btn-text::before {
+    content: "Following";
+    color: green;
+    border-color: green;
+}
+
+
+/* RECOMMENDED ALBUMS */
+.recommended-albums {
+    text-align: center;
+    padding-top: 60px;
+    background-color: #fff177;
+    height: 100vh;
+}
+
+.recommended-albums h2 {
+    font-size: 36px;
+    padding-top: 20px;
+    margin-bottom: 10px;
+    color: #232222;
+}
+
+.recommended-albums h4 {
+    font-size: 18px;
+    color: #888;
+}
+
+/* search bar */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.search-bar input {
+    width: 500px;
+    padding: 10px;
+    border: 2px solid #888;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 10px;
+    border: 2px solid #888;
+    border-left: none;
+    border-radius: 0 25px 25px 0;
+    background-color: #888;
+    cursor: pointer;
+    color: #fff;
+}
+
+.search-bar button i {
+    font-size: 16px;
+}
+
+.search-bar button:hover {
+    background-color: #666;
+}
+
+/* album cards */
+.album-card img {
+    width: 150px;
+    height: auto;
+    left: 0px;
+    border-radius: 15px;
+    border: 2px solid black;
+
+
+}
+
+.album-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.album-card {
+    display: flex;
+    background-color: #fff;
+    border: 1px solid black;
+    margin: 10px;
+    width: 495px;
+    height: 94px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.album-title{
+    padding-left: 20px;
+    padding-top: 5px;
+}
+
+.album-card h3 {
+    font-size: 29px;
+    margin-top: 10px;
+    height: 33px;
+}
+
+.album-card p {
+    font-size: 20px;
+    color: #666;
+    margin: 5px;
+    height: 26px;
+}
+
+
+.album-card .know-more {
+    display: none;
+    position: absolute;
+    height: 55px;
+    width: 75px;
+    bottom: 23%;
+    left: 82%;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.album-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.album-card:hover,
+.album-card:hover .know-more {
+    display: flex;
+    opacity: 1;
+}
+
+/* USER REVIEWS */
+
+.user-reviews {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #e4d6ec;
+    padding-top: 90px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.user-reviews h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #777;
+    margin-bottom: 30px;
+    font-weight:500;
+}
+
+.reviews-submit {
+    display: flex;
+}
+
+.reviews-container {
+    display: flex;
+    position: relative;
+    top: 20px;
+    width: 55%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+}
+
+.review-card {
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    height: 160px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-image {
+    width: 80px;
+    position: relative;
+    left: -85px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.user-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    position: relative;
+    top: -70px;
+    left: 90px;
+    width: 150px;
+}
+
+.user-review {
+    position: relative;
+    top: -25px;
+    font-size: 16px;
+    color: #555;
+    text-align: left;
+}
+
+.submit-review {
+    text-align: left;
+    position: relative;
+    top:-10px;
+    width: 45%;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.submit-review h3 {
+    font-size: 1.5em;
+    margin: 20px;
+    text-align: center;
+}
+
+form .form-group {
+    margin-bottom: 40px;
+}
+
+form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form .form-group input,
+form .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form .form-group input:focus,
+form .form-group textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: black;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-media {
+    display: flex;
+    gap: 30px;
+}
+
+.social-icon img {
+    width: 35px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.social-icon:hover img {
+    transform: scale(1.2);
+}
+
+.back-to-top{
+    font-size: 15px;
+    height: 20px;
+    width: 170px;
+}
+.back-to-top a{
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+}
+.back-to-top a:hover{
+    color:black;
+    background-color: white;
+    text-decoration: underline;
+}
+
+.footer-links {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+

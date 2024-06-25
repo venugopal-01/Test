@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navibar">
+        <a href="#intro-section"><img id="logo" src="./images/music.jpg" alt="Logo"></a>
+        <div class="item"><a id="item-1" href="#intro-section">Home</a></div>
+        <div class="item"><a id="item-2" href="#featured-playlists">Featured</a></div>
+        <div class="item"><a id="item-3" href="#recommended-albums">Recommended</a></div>
+        <div class="item"><a id="item-4" href="#user-reviews">Reviews</a></div>
+        <div class="item"><a id="item-5" href="#_footer">Contact us</a></div>
+    </div>
+    <div class="intro-section" id="intro-section">
+        <div class="intro-left">
+            <h1>MusicAPP</h1>
+            <p>Embark on a limitless musical journey with us</p>
+            <button onclick="window.location.href='#featured-playlists'">Explore Featured Playlists</button>
+        </div>
+        <div class="intro-right">
+            <img src="./images/music.jpg" alt="Music Image">
+        </div>
+    </div>
+    <section class="featured-playlists" id="featured-playlists">
+        <div class="section-header">
+            <h1>Featured Playlists</h1>
+            <p>Discover our specially curated playlists for every mood and moment</p>
+        </div>
+        <div class="playlist-cards">
+            <div class="playlist-card">
+                <div class="card-header">
+                    <img src="./images/chill vibes.jpg" alt="Playlist 1">
+                    <span class="song-count">20 Songs</span>
+                </div>
+                <div class="card-body">
+                    <h2>Soothing Aura</h2>
+                    <p>Take it easy with these chill tracks.</p>
+                    <label class="follow-btn">
+                        <input type="checkbox">
+                        <span class="btn-text"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="playlist-card">
+                <div class="card-header">
+                    <img src="./images/workout mix.jpg" alt="Playlist 2">
+                    <span class="song-count">15 Songs</span>
+                </div>
+                <div class="card-body">
+                    <h2>Gym Jam</h2>
+                    <p>Energize with this playlist of dynamic workout tunes.</p>
+                    <label class="follow-btn">
+                        <input type="checkbox">
+                        <span class="btn-text"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="playlist-card">
+                <div class="card-header">
+                    <img src="./images/top hits.jpg" alt="Playlist 3">
+                    <span class="song-count">25 Songs</span>
+                </div>
+                <div class="card-body">
+                    <h2>Top Hits</h2>
+                    <p>Stay up to date with the latest chart-toppers.</p>
+                    <label class="follow-btn">
+                        <input type="checkbox">
+                        <span class="btn-text"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="playlist-card">
+                <div class="card-header">
+                    <img src="./images/deep nostalgia.jpg" alt="Playlist 4">
+                    <span class="song-count">18 Songs</span>
+                </div>
+                <div class="card-body">
+                    <h2>Deep Nostalgia</h2>
+                    <p>Explore antique music from popular artists.</p>
+                    <label class="follow-btn">
+                        <input type="checkbox">
+                        <span class="btn-text"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="recommended-albums" id="recommended-albums">
+        <h2>Recommended Albums</h2>
+        <h4>Discover new music</h4>
+        <div class="search-bar">
+            <input type="text" placeholder="Search Artists, Songs, Albums...">
+            <button><i class="fa fa-search"></i></button>
+        </div>
+        <div class="album-cards">
+            <div class="album-card">
+                <img src="./images/millennium.jpg" alt="millennium">
+                <div class="album-title">
+                    <h3>Millennium</h3>
+                    <p>Backstreet Boys</p>
+                </div>
+                <button class="know-more">Know More</button>
+            </div>
+            <div class="album-card">
+                <img src="./images/om shanti om.jpg" alt="om shanti om">
+                <div class="album-title">
+                    <h3>Om Shanti Om</h3>
+                    <p>Vishal-Shekhar</p>
+                </div>
+                <button class="know-more">Know More</button>
+            </div>
+            <div class="album-card">
+                <img src="./images/Back in Black.jpg" alt="Back in Black">
+                <div class="album-title">
+                    <h3>Back in Black</h3>
+                    <p>AC/DC</p>
+                </div>
+                <button class="know-more">Know More</button>
+            </div>
+            <div class="album-card">
+                <img src="./images/Dil-Se.jpg" alt="Dil Se">
+                <div class="album-title">
+                    <h3>Dil Se</h3>
+                    <p>A.R. Rahman </p>
+                </div>
+                <button class="know-more">Know More</button>
+            </div>
+            <div class="album-card">
+                <img src="./images/Evolve.jpg" alt="Evolve">
+                <div class="album-title">
+                    <h3>Evolve</h3>
+                    <p>Imagine Dragons</p>
+                </div>
+                <button class="know-more">Know More</button>
+            </div>
+            <div class="album-card">
+                <img src="./images/barfi.jpg" alt="Barfi!">
+                <div class="album-title">
+                    <h3>Barfi!</h3>
+                    <p>Pritam</p>
+                </div>
+                <button class="know-more">Know More</button>
+            </div>
+        </div>
+    </div>
+    <section class="user-reviews" id="user-reviews">
+        <h2>User Reviews</h2>
+        <div class="subtitle">What our customers are saying</div>
+        <div class="reviews-submit">
+            <div class="reviews-container">
+                <div class="review-card">
+                    <img src="./images/peter parker.jpeg" alt="User 1" class="user-image">
+                    <div class="user-name">Peter Parker</div>
+                    <div class="user-review">This product is amazing! It exceeded my expectations and I couldn't be
+                        happier</div>
+                </div>
+
+                <div class="review-card">
+                    <img src="./images/peter2.jpg" alt="User 2" class="user-image">
+                    <div class="user-name">Peter B. Parker</div>
+                    <div class="user-review">Great quality and fantastic customer service. I highly recommend this to
+                        everyone!</div>
+                </div>
+
+                <div class="review-card">
+                    <img src="./images/peter3.jpg" alt="User 3" class="user-image">
+                    <div class="user-name">Pavitr Prabakar</div>
+                    <div class="user-review">Absolutely love it! The best investment I've made in a long time. Five
+                        stars!
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <img src="./images/may.jpeg" alt="User 3" class="user-image">
+                    <div class="user-name">Maybelle Parker</div>
+                    <div class="user-review">Delighted with my purchase! Easily the top investment I've made recently.
+                        Full five stars!
+                    </div>
+                </div>
+            </div>
+
+            <div class="submit-review">
+                <h3>Submit Your Review</h3>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="review">Review</label>
+                        <textarea id="review" name="review" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer id="_footer">
+        <div class="footer-content">
+            <div class="social-media">
+                <a href="https://facebook.com" target="_blank" class="social-icon">
+                    <img src="https://img.icons8.com/?size=100&id=yGcWL8copNNQ&format=png&color=000000" alt="Facebook">
+                </a>
+                <a href="https://twitter.com" target="_blank" class="social-icon">
+                    <img src="https://img.icons8.com/?size=100&id=ClbD5JTFM7FA&format=png&color=000000" alt="Twitter">
+                </a>
+                <a href="https://instagram.com" target="_blank" class="social-icon">
+                    <img src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000" alt="Instagram">
+                </a>
+            </div>
+            <div class="back-to-top"><a href="#intro-section" id="back-to-top">Back To Top</a></div>
+            <div class="footer-links">
+                <a href="https://example.com/terms" target="_blank">Terms and Conditions</a>
+                <a href="https://example.com/privacy" target="_blank">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+</body> 
+
+</html>
